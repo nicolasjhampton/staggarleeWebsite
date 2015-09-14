@@ -1,0 +1,12 @@
+each billboard in billboards
+  div(class=billboard.class)
+    .row
+      .col-sm-6
+        img.headerImg.img-responsive(src='static/' + billboard.img, style=billboard.imgCurve)
+      .col-sm-6
+        h2 !{billboard.header}
+        // lead makes the main body text a little better
+        p.lead !{billboard.paragraph}
+    p.btn-group
+      // the btn class has a lot of feature classes for buttons
+      a.btn.btn-success.btn-lg(data-toggle='modal', href='#textModal') #{billboard.buttonText}

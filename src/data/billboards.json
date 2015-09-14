@@ -1,0 +1,26 @@
+{
+  "boardOne": {
+     "class": "item active",
+     "img": "/img/Headshot.jpg",
+     "imgCurve": "border-radius: 100%",
+     "header": "One Man.</br>His code, our copy, your design.",
+     "paragraph": "Looking for a developer that understands people? Tired of sifting through copy a second time around? Need someone who can get out of the way of your design vision? Consider Nicolas &amp; Staggarlee Development.",
+     "buttonText": "Let's get started!"
+  },
+  "boardTwo": {
+     "class": "item",
+     "img": "/img/Headshot.jpg",
+     "imgCurve": "border-radius: 100%",
+     "header": "Quick, clean, and innovative.",
+     "paragraph": "We'll get your site looking like the modern web on everything:<br>Desktop, laptop, tablet and phone.",
+     "buttonText": "Help me Staggarlee!"
+  },
+  "boardThree": {
+     "class": "item",
+     "img": "/img/hat.svg",
+     "imgCurve": "",
+     "header": "Easy Maintainance",
+     "paragraph": "Passing a project on shouldn't mean starting again. We'll make sure you're using modern conventions that you can update and your next developer can read and pick up in a flash!",
+     "buttonText": "Let's update for tomorrow!"
+  }
+}

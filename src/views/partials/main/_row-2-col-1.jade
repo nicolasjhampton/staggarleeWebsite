@@ -1,0 +1,12 @@
+.col-md-12.hidden-xs
+  // first item in second row, hidden for x-small devices
+  h3 #{row2.header}
+  p #{row2.paragraph}
+  .row
+    // nested row in the first item
+    .col-sm-6
+      img.img-responsive(style='min-width:300px', src='static/' + row2.img)
+    .col-sm-6(style='padding-top: 30px')
+      p !{row2.linkHeader}
+      a(href='#') !{row2.buttonText}
+  hr

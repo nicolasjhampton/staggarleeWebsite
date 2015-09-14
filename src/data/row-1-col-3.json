@@ -1,0 +1,17 @@
+{
+  "col-1": {
+      "img": "glyphicon glyphicon-briefcase",
+      "header": "An expanding set of skills and tools",
+      "paragraph": "You want a developer that knows their stuff. Nicolas can deliever the code to get your vision looking the way you want it for your business, art, and home. Want some new cutting edge feature? We're here to learn and implement it, fast and effectively."
+  },
+  "col-2": {
+      "img": "glyphicon glyphicon-pencil",
+      "header": "Keeping an eye on the code and the copy",
+      "paragraph": "Few things are worse than finding that typo in your website or app after the project is done and the developer has moved on. With 15 years of writing and editing experience, Staggarlee Development has the eyes to get the words right the first time."
+  },
+  "col-3": {
+      "img": "glyphicon glyphicon-tag",
+      "header": "Pay for code, not an endless hosting service",
+      "paragraph": "This might be the internet of 21st century business, but for tight pockets there is still plenty of options. Let's pay for the time it takes to make it look good, and we'll find the best hosting solution that fits your needs and your wallet."
+  }
+}

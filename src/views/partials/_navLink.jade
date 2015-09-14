@@ -1,0 +1,9 @@
+if path === #{siteList.link}
+  li.active
+    a(href=siteList.link)
+      | Home
+      span.sr-only (current)
+else
+  li
+    a(href=siteList.link)
+      | Home

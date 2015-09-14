@@ -1,0 +1,47 @@
+#textModal.modal.fade
+  .modal-dialog
+    .modal-content
+      // Title and closing button
+      .modal-header
+        button.close(type='button', data-dismiss='modal', aria-hidden='true')
+          | ×
+        h4.modal-title What are you looking for?
+      .modal-body
+        form.form
+          // Name, company, email, and phone fields
+          .form-group
+            label.formLabel(for='name') Name:
+            input#formName.form-control(type='text', placeholder='Name')
+            label.formLabel(for='company') Organization/Company: (Optional)
+            input#formOrg.form-control(type='text', placeholder='Organization')
+            label.formLabel(for='email') Email:
+            input#formEmail.form-control(type='email', placeholder='Email')
+            label.formLabel(for='phone') Phone:(Optional)
+            input#formPhone.form-control(type='tel', placeholder='Phone number')
+          // project dropdown
+          .form-group
+            label.formLabel(for='project') Project:
+            select.form-control
+              option(value=1) Personal site
+              option(value=2) Writer's blog
+              option(value=3) Artist Portfolio
+              option(value=4) Non-profit website
+              option(value=5) Business site
+              option(value=6) Web hosted app/service
+              option(value=7) Employer looking to hire
+          // timeframe dropdown
+          .form-group
+            label.formLabel(for='time-frame') What's your project's timetable:
+            select.form-control
+              option(value=5) I need it yesterday!
+              option(value=4) I have a week.
+              option(value=3) Two weeks is reasonable
+              option(value=2) End of the month
+              option(value=1) Large project for the quarter
+              option(value=6) Loking to hire long-term employee
+          // textarea for details
+          .form-group
+            label.formLabel(for='description') So, tell me more about it...(500 characters max)
+            textarea#formDetails.form-control(type='text')
+          // submit button
+          button.btn.btn-primary(type='submit', data-dismiss='modal') Let's talk about it!

@@ -1,0 +1,61 @@
+// header navigation
+nav.navbar.navbar-default.navbar-fixed-top
+  .container-fluid
+    // mobile menu collapse button
+    .navbar-header
+      button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+        span.sr-only Toggle navigation
+        span
+          img.img-responsive(style='width:30px', src='static/img/hat.svg')
+      a.navbar-brand(href='/home')
+        // small/large nav title for mobile/desktop displays, css switches display at 450px
+        p.navTitleSm
+          | Nicolas Hampton
+          br
+          | Staggarlee Development
+        p.navTitleLg Nicolas Hampton | Staggarlee Development
+        p.navTitleLogo
+          | Nicolas Hampton  
+          img.img-responsive(style='width:30px;display:inline', src='static/img/hat.svg')
+          |   Staggarlee Development
+    // collapsable menu for mobile and desktop
+    #bs-example-navbar-collapse-1.collapse.navbar-collapse
+      // menu options
+      ul.nav.navbar-nav.navbar-right
+        if path === '/home'
+          li.active
+            a(href='/home')
+              | Home
+              span.sr-only (current)
+        else
+          li
+            a(href='/home')
+              | Home
+        if path === '/about'
+          li.active
+            a(href='/about') About Nicolas
+              span.sr-only (current)
+        else
+          li
+            a(href='/about') About Nicolas
+        // portfolio dropdown menu
+        li.dropdown
+          a(data-toggle='dropdown', data-target='#')
+            | Portfolio
+            b.caret
+          ul.dropdown-menu
+            if path === '/projects'
+              li.active
+                a(href='/projects') Development Projects
+                  span.sr-only (current)
+            else
+              li
+                a(href='/projects') Development Projects
+            li.divider
+            if path === '/publications'
+              li.active
+                a(href='/publications') Publications
+                  span.sr-only (current)
+            else
+              li
+                a(href='/publications') Publications

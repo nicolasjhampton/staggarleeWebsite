@@ -1,0 +1,24 @@
+extends ./layout.jade
+block content 
+  div(id="myCarousel").carousel.slide.jumbotron
+    .container
+      ol.carousel-indicators
+        li(data-target="#myCarousel", data-slide-to="0").active
+        
+        li(data-target="#myCarousel", data-slide-to="1")
+        
+        li(data-target="#myCarousel", data-slide-to="2")
+        
+      .carousel-inner
+        include ../partials/main/_billboards.jade
+    a(href="#myCarousel" data-slide="prev").left.carousel-control
+      span.icon-prev 
+    a(href="#myCarousel" data-slide="next").right.carousel-control
+      span.icon-next 
+  include ../partials/main/_modal.jade
+  .container
+    .row
+      include ../partials/main/_row-1-col-3.jade
+    hr
+    .row
+      include ../partials/main/_row-2-col-1.jade

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Nicolas James Hampton | Staggarlee Development</title>
+
+      <!-- mobile adaptable viewport sensor -->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!-- bootstrap css: do not directly modify -->
+      <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+      <link href="css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
+
+      <!-- custome css modifications -->
+      <link href="css/my-styles.css" rel="stylesheet" media="screen">
+
+      <!--bootstrap glyph icons -->
+      <link href="fonts/glyphicons-halflings-regular.svg" rel="image/svg+xml" media="screen">
+      <link href="fonts/glyphicons-halflings-regular.eot" rel="application/octet-stream" media="screen">
+      <link href="fonts/glyphicons-halflings-regular.ttf" rel="application/octet-stream" media="screen">
+      <link href="fonts/glyphicons-halflings-regular.woff" rel="application/font-woff" media="screen">
+
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!--[if lt IE 9]>
+        <script src="../../assets/js/html5shiv.js"></script>
+        <script src="../../assets/js/respond.min.js"></script>
+      <![endif]-->
+    </head>
+  <body>
+
+    <!--header navigation-->
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+
+        <!-- mobile menu collapse button -->
+        <div class="navbar-header">
+
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span><img style="width:30px" class="img-responsive" src="./img/hat.svg"></span>
+          </button>
+
+          <a class="navbar-brand" href="#">
+            <!-- small/large nav title for mobile/desktop displays, css switches display at 450px -->
+            <p class="navTitleSm">Nicolas Hampton<br>Staggarlee Development</p>
+            <p class="navTitleLg">Nicolas Hampton | Staggarlee Development</p>
+            <p class="navTitleLogo">Nicolas Hampton &nbsp;<img style="width:30px;display:inline" class="img-responsive" src="./img/hat.svg">&nbsp; Staggarlee Development</p>
+          </a>
+
+        </div><!-- end mobile menu collapse button -->
+
+        <!--collapsable menu for mobile and desktop-->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+          <!-- menu options -->
+          <ul class="nav navbar-nav navbar-right">
+
+            <li class="active"><a href="#">Home<span class="sr-only">(current)</span></a></li>
+
+            <li><a href="#">News &amp; Events</a></li>
+
+            <li><a href="#">Contact</a></li>
+
+            <!--portfolio dropdown menu-->
+            <li class="dropdown"><a data-toggle="dropdown" data-target="#">Portfolio<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">About Nicolas</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Development Projects</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Publications</a></li>
+              </ul>
+            </li><!--end portfolio dropdown menu-->
+
+          </ul><!--end menu options-->
+
+        </div><!--collapsable menu for mobile and desktop-->
+      </div><!--end centering container-->
+    </nav><!--end navigation-->
+
+    <!--end header navigation-->
+
+
+    <div id="myCarousel" class="carousel slide jumbotron">
+      <div class="container">
+
+        <!-- carousel list definitions for circle indicators -->
+        <ol class="carousel-indicators">
+          <li class="active" data-target="#myCarousel" data-slide-to="0"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- begin carousel content -->
+        <div class="carousel-inner">
+
+          <!-- first slide -->
+          <div class="item active">
+
+            <div class="row">
+              <div class="col-sm-6">
+                <img src="./img/Headshot.jpg" class="headerImg img-responsive">
+              </div>
+              <div class="col-sm-6">
+                <h2>One Man.<br>His code, our copy, your design.</h2>
+                <!--lead makes the main body text a little better-->
+                <p class="lead">Looking for a developer that understands people? Tired of sifting through copy a second time around? Need
+                someone who can get out of the way of your design vision? Consider Nicolas &amp; Staggarlee Development.</p>
+              </div>
+            </div>
+            <p class="btn-group">
+              <!-- the btn class has a lot of feature classes for buttons-->
+              <a class="btn btn-success btn-lg" data-toggle="modal" href="#textModal">Let's get started!</a>
+              <!-- may add a button later <a class="btn btn-default btn-lg" href="#">What button says</a> -->
+            </p>
+          </div>
+
+          <!-- second slide -->
+          <div class="item">
+            <h1>Quick, clean, and innovative.</h1>
+            <!--lead makes the main body text a little better-->
+            <p class="lead">We'll get your site looking like the modern web on everything:<br>
+            Desktop, laptop, tablet and phone.</p>
+            <p class="btn-group">
+              <!-- the btn class has a lot of feature classes for buttons-->
+              <a class="btn btn-success btn-lg" href="#">Help me Staggarlee!</a>
+            </p>
+          </div>
+
+          <!-- third slide -->
+          <div class="item">
+            <h1>Easy Maintainance</h1>
+            <!--lead makes the main body text a little better-->
+            <p class="lead">Passing a project on shouldn't mean starting again. We'll make sure you're using modern
+            conventions that you can update and your next developer can read and pick up in a flash!</p>
+            <p class="btn-group">
+              <!-- the btn class has a lot of feature classes for buttons-->
+              <a class="btn btn-success btn-lg" href="#">Let's update for tomorrow!</a>
+            </p>
+          </div>
+
+        </div><!-- end carousel inner -->
+      </div><!--end carousel container -->
+
+      <!-- carousel previous/next buttons -->
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="icon-prev"></span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="icon-next"></span>
+      </a><!-- carousel previous/next buttons -->
+
+    </div><!--end carousel -->
+
+    <div class="modal fade" id="textModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <!--Title and closing button-->
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+              &times;
+            </button>
+            <h4 class="modal-title">What are you looking for?</h4>
+          </div><!--end Title and closing button-->
+
+          <div class="modal-body">
+            <form class="form">
+
+              <!--Name, company, email, and phone fields-->
+              <div class="form-group">
+                <label class="formLabel" for="name">Name:</label>
+                <input type="text" class="form-control" id="formName" placeholder="Name">
+                <label class="formLabel" for="organization">Organization/Company:</label>
+                <input type="text" class="form-control" id="formOrg" placeholder="Organization">
+                <label class="formLabel" for="email">Email:</label>
+                <input type="email" class="form-control" id="formEmail" placeholder="Email">
+                <label class="formLabel" for="phone">Phone:(Optional)</label>
+                <input type="tel" class="form-control" id="formPhone" placeholder="Phone number">
+              </div><!-- end Name, company, email, and phone fields-->
+
+              <!--project dropdown-->
+              <div class="form-group">
+                <label class="formLabel" for="project">Project:</label>
+                <select class="form-control">
+                  <option>Personal site</option>
+                  <option>Writer's blog</option>
+                  <option>Artist Portfolio</option>
+                  <option>Non-profit website</option>
+                  <option>Business site</option>
+                  <option>Web hosted app/service</option>
+                  <option>Employer looking to hire</option>
+                </select>
+              </div><!-- end project dropdown -->
+
+              <!--timeframe dropdown-->
+              <div class="form-group">
+                <label class="formLabel" for="time-frame">What's your project's timetable:</label>
+                <select class="form-control">
+                  <option>I need it yesterday!</option>
+                  <option>I have a week.</option>
+                  <option>Two weeks is reasonable</option>
+                  <option>End of the month</option>
+                  <option>Large project for the quarter</option>
+                  <option>Loking to hire long-term employee</option>
+                </select>
+              </div><!-- end timeframe dropdown-->
+
+              <!-- textarea for details -->
+              <div class="form-group">
+                <label class="formLabel" for="details">So, tell me more about it...</label>
+                <textarea type="text" class="form-control" id="formDetails"></textarea>
+              </div><!-- end textarea for details -->
+
+              <!-- submit button -->
+              <button type="submit" class="btn btn-primary" data-dismiss="modal">Let's talk about it!</button>
+
+            </form><!-- end form class -->
+          </div><!--end modal-body-->
+        </div><!--end modal-content-->
+      </div><!--end modal-dialog-->
+    </div><!--end modal-fade-->
+
+
+
+
+    <!--three ranges of size we can use for our columns-->
+    <!--xs, sm, md, and lg for extra small, small, medium, and large-->
+    <!--here, it's being used for breakpoints, but these prefixes seem to be the same-->
+    <!--throughout bootstrap-->
+    <div class="container">
+      <div class="row"><!-- first row -->
+
+        <div class="col-sm-4">
+          <b class="glyphicon glyphicon-briefcase"></b>
+          <h2>An expanding set of skills and tools</h2>
+          <p>You want a developer that knows their stuff. Nicolas can deliever the code to
+             get your vision looking the way you want it for your business, art, and home. Want some
+             new cutting edge feature? We're here to learn and implement it, fast and effectively
+          </p>
+        </div>
+
+        <div class="col-sm-4">
+          <b class="glyphicon glyphicon-pencil"></b>
+          <h2>Keeping an eye on the code and the copy</h2>
+          <p>Few things are worse than finding that typo in your website or app after the
+            project is done and the developer has moved on. With 15 years of writing and editing
+            experience, Staggarlee Development has the eyes to get the words right the first time.
+          </p>
+        </div>
+
+        <div class="col-sm-4">
+          <b class="glyphicon glyphicon-tag"></b>
+          <h2>Pay for code, not an endless hosting service</h2>
+          <p>This might be the internet of 21st century business, but for tight pockets there
+             is still plenty of options. Let's pay for the time it takes to make it look good,
+             and we'll find the best hosting solution that fits your needs and your wallet.
+          </p>
+        </div>
+
+      </div><!--end of first row -->
+
+      <hr><!--this appears to be a line seperator-->
+
+      <div class="row"><!-- second row -->
+        <!--The hidden-xs class will hide this column in x-small viewport ranges-->
+        <div class="col-md-12 hidden-xs"><!-- first item in second row, hidden for x-small devices  -->
+          <h3>About Staggarlee</h3>
+          <p>You work hard enough to need a presence on the web. Staggerlee Development is about
+             respecting that, and working hard enough to get out of the way of your goals. Let'
+             approach this project not only with a respect for who you are, but what your time means.
+             The internet may be a new hat for you, but it's still your hat. Let's get you back to wearing it!
+          </p>
+
+          <div class="row"><!-- nested row in the first item -->
+            <!--col-md-push and pull changes the position of the element on the grid
+            based on various different viewports, in this case, pushing the column
+            6 blocks when above a medium layout-->
+            <div class="col-sm-6 col-md-push-6">
+              <img style="min-width:300px" class="img-responsive" src="./img/hat.svg">
+            </div>
+
+            <div style="padding-top: 30px" class="col-sm-6 col-md-pull-6">
+              <p>Reasonable pricing, let's start a consultation.</p>
+              <a href="#">Help me Staggarlee! &#187;</a>
+            </div>
+
+          </div><!--end of nested row in the first item -->
+
+        </div><!--end of first item in second row  -->
+
+      </div><!--end of second row -->
+    </div><!-- end of container -->
+
+    <footer>
+      <br>
+      <br>
+      <span><p>&copy; 2015 Nicolas James Hampton, All Rights Reserved</p></span>
+      <br>
+      <br>
+    </footer>
+
+
+
+    <script src="./libs/jquery-2.1.4.min.js"></script>
+    <script src="./libs/bootstrap.min.js"></script>
+    <script src="./js/app.js"></script>
+
+  </body>
+</html>
