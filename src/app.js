@@ -56,15 +56,11 @@ app.get('/about', function (request, response) {
 });
 
 app.get('/projects', function (requests, response) {
+
   // get the path so we can set the active link in template
   var path = requests.path;
 
-  // set variables to hold json response from github
-  var javaProjects = [];
-  var javascriptProjects = [];
-  var htmlProjects = [];
-  var otherLangProjects = [];
-
+  // set github variables for request method
   var options = {
     url: 'https://api.github.com/users/nicolasjhampton/repos',
     headers: {
@@ -72,60 +68,21 @@ app.get('/projects', function (requests, response) {
     }
   };
 
-
-
   // request json project data from github
   request(options, function(error, gitResponse, body) {
 
-    var body = JSON.parse(body);
+    // check for a successful response
     if(!error && gitResponse.statusCode == 200){
 
-      // split each project into its indivisual language
-      for (var index = 0; index < body.length; ++index) {
-
-        switch(body[index].language) {
-
-          //Java, JavaScript, HTML, and (other)
-          case "Java":
-            javaProjects.push(body[index]);
-            break;
-          case "JavaScript":
-            javascriptProjects.push(body[index]);
-            break;
-          case "HTML":
-            htmlProjects.push(body[index]);
-            break;
-          default:
-            otherLangProjects.push(body[index]);
-            break;
-
-        }
-      }
-
-      var projects = {
-        "html": htmlProjects,
-        "javascript": javascriptProjects,
-        "java": javaProjects,
-        "otherLang": otherLangProjects
-      }
-
+      // parse the body of the response into valid JSON
+      var body = JSON.parse(body);
 
       // render the template, sending the project data
       response.render('projects', {path:path,
-                      projects:projects});
+                      projects:body});
+
     }
   });
-
-  // Handle any timeout from github
-  //gitRequest.on('requestTimeout', function(timeoutResponse) {
-    //response.render('projects', {path:path, timeout:timeoutResponse});
-  //});
-
-  // Handle any error sent from github
-  //gitRequest.on('error', function(error) {
-    //response.render('projects', {path:path, error:error});
-  //});
-
 });
 
 app.get('/publications', function (request, response) {

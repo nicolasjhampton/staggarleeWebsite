@@ -1,3 +1,31 @@
-h2 #{lang[index].name}
-a(href=lang[index].html_url) #{lang[index].html_url}
-p #{lang[index].description}
+if projects[index - 1] !== null
+  .row
+    .col-sm-6.column
+      .projectContent
+        h2 #{projects[index].name}
+        h4 #{projects[index].language}
+        a.btn.btn-success.btn-sm(href=projects[index].html_url)
+          | View Source
+        p(style="font-size: .5rem")
+          br
+        p #{projects[index].description}
+    .col-sm-6.column
+      .projectContent
+        h2 #{projects[index - 1].name}
+        h4 #{projects[index - 1].language}
+        a.btn.btn-success.btn-sm(href=projects[index - 1].html_url)
+          | View Source
+        p(style="font-size: .5rem")
+          br
+        p #{projects[index - 1].description}
+else
+  .row
+    .col-sm-12.column
+      .projectContent
+        h2 #{projects[index].name}
+        h4 #{projects[index].language}
+        a.btn.btn-success.btn-sm(href=projects[index].html_url)
+          | View Source
+        p(style="font-size: .5rem")
+          br
+        p #{projects[index].description}

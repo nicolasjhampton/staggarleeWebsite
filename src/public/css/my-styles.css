@@ -1,20 +1,29 @@
+/************************
+  Main
+ ************************/
+
 body {
+  /* all text will be black */
   color: black;
+  /* pushes the content for behind the navbar */
   padding: 50px 0 0 0;
-  text-align: center;
+  /* We can center all text if we want to here */
+  /* text-align: center; */
 }
 
-.navbar {
-  padding: 0px;
-}
+/************************
+ Navbar
+ ************************/
 
+/* Keeps stacked navbar brand from breaking out
+   of border and the color a dark black */
 .navbar .container-fluid .navbar-header .navbar-brand {
   padding-top: 5px;
   color: black;
-  vertical-align: center;
 }
 
-/* hide long version of title for better mobile display*/
+/* changing the navbar header that's visable */
+/* show stacked name */
 .navbar .container-fluid .navbar-header .navbar-brand .navTitleLg {
   display: none;
 }
@@ -27,38 +36,36 @@ body {
   display: none;
 }
 
-div {
-  text-align: center;
-}
+/************************
+ Footer
+ ************************/
 
-div .container {
-  max-width: 1000px;
-}
+ footer {
+   text-align: center;
+ }
 
-.jumbotron {
-  text-align: center;
-}
+/************************
+ Jumbotron Carousel
+ ************************/
 
-.jumbotron div {
-  text-align: center;
-}
+ .jumbotron {
+   text-align: center;
+ }
 
-.jumbotron p, .jumbotron h1 {
-  margin: 2% 5%;
-  color: black;
-}
+ .jumbotron div {
+   text-align: center;
+ }
 
-.headerImg {
-  display:inline;
-  max-width:200px;
-}
+ .jumbotron p, .jumbotron h1 {
+   margin: 2% 5%;
+   color: black;
+ }
 
-.glyphicon {
-  font-size: 3em;
-  display: block;
-  text-align: center;
-  color:#3a878d;
-}
+ .headerImg {
+   display:inline;
+   max-width:200px;
+ }
+
 .carousel-indicators {
   bottom:0;
 }
@@ -71,6 +78,21 @@ div .container {
   border-color:#222;
 }
 
+/************************
+  Main page rows
+ ************************/
+
+.glyphicon {
+  font-size: 3em;
+  display: block;
+  text-align: center;
+  color:#3a878d;
+}
+
+/************************
+ Modal window
+ ************************/
+
 .form-group {
   text-align: left;
   color: black;
@@ -80,53 +102,74 @@ div .container {
   padding-top: 10px;
 }
 
-#project-img {
-  min-width: 250px;
-  display: inline;
+/************************
+ Project page
+ ************************/
+
+.projectContent {
+  background: lightgrey;
+  border-radius: 7px;
+  margin: 10px 15px 0;
+  padding: 10px 10px;
+  margin-top: 10px;
+  text-align: center;
 }
 
 
-@media (min-width: 450px) {
-  .navbar .container-fluid .navbar-header .navbar-brand .navTitleLg {
-    display: inline;
+
+/*************************************
+ Responsive details for larger screens
+ *************************************/
+
+
+  @media (min-width: 450px) {
+
+    /* changing the navbar header that's visable */
+    /* show inline name with pipe seperator */
+    .navbar .container-fluid .navbar-header .navbar-brand .navTitleLg {
+      display: inline;
+    }
+
+    .navbar .container-fluid .navbar-header .navbar-brand .navTitleSm {
+      display: none;
+    }
+
+    .navbar .container-fluid .navbar-header .navbar-brand .navTitleLogo {
+      display: none;
+    }
+
+    /* navbar header changes from stacked to inline here */
+    .navbar .container-fluid .navbar-header .navbar-brand {
+      padding-top: 15px;
+    }
+
+    /* changing the size of the jumbotron image */
+    .headerImg {
+      display:inline;
+      min-width: 300px;
+      max-width:350px;
+    }
   }
 
-  .navbar .container-fluid .navbar-header .navbar-brand .navTitleSm {
-    display: none;
-  }
+  /* standard Bootstap md size breakpoint */
+  @media (min-width: 768px) {
 
-  .navbar .container-fluid .navbar-header .navbar-brand .navTitleLogo {
-    display: none;
-  }
+    /* moving the jumbotron image and text
+    down after content splits in two rows */
+    .headerImg {
+      margin-top: 50px;
+    }
 
-  .navbar .container-fluid .navbar-header .navbar-brand {
-    padding-top: 15px;
-  }
+    .carousel-inner h2 {
+      padding-top: 30px;
+    }
 
-  .headerImg {
-    display:inline;
-    min-width: 300px;
-    max-width:350px;
-  }
-}
-
-@media (min-width: 768px) {
-  .headerImg {
-    margin-top: 50px;
-    /*margin-left: 100px;*/
-  }
-
-  .carousel-inner .row {
-    vertical-align: center;
-    padding: 0 0;
-    /*margin-left: -100px;*/
-  }
-
-  .carousel-inner h2 {
-    padding-top: 30px;
   }
 
   @media (min-width: 785px) {
+
+    /* changing the navbar header that's visable */
+    /* show inline name with picture seperator */
     .navbar .container-fluid .navbar-header .navbar-brand .navTitleLg {
       display: none;
     }
@@ -141,11 +184,4 @@ div .container {
 
 
   }
-
-  /*@media (min-width: 985px) {
-    #project-img {
-      margin: 0 0 0 120px;
-      padding: 0 0;
-    }
-  }*/
 }
