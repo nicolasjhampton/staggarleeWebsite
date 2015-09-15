@@ -80,6 +80,11 @@ div .container {
   padding-top: 10px;
 }
 
+#project-img {
+  min-width: 250px;
+  display: inline;
+}
+
 
 @media (min-width: 450px) {
   .navbar .container-fluid .navbar-header .navbar-brand .navTitleLg {
@@ -136,4 +141,11 @@ div .container {
 
 
   }
+
+  /*@media (min-width: 985px) {
+    #project-img {
+      margin: 0 0 0 120px;
+      padding: 0 0;
+    }
+  }*/
 }
