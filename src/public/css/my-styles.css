@@ -113,7 +113,48 @@ body {
   padding: 10px 10px;
   margin-top: 10px;
   text-align: center;
+  min-height: 240px;
+  max-height: 260px;
 }
+
+/************************
+  About page
+ ************************/
+
+ .about .row1 {
+   padding-top: 50px;
+ }
+
+ .center {
+   text-align: center;
+ }
+
+ .aboutPageImg {
+   border-radius: 100%;
+   margin-top:20px;
+   max-width: 300px;
+   display:inline;
+   padding: 0 0;
+ }
+
+ .contactHeader{
+   display: block;
+ }
+
+ .contactImg {
+   max-width: 50px;
+   display:inline;
+ }
+
+ .skills {
+   background: #dedede;
+   border-radius: 7px;
+   padding: 5px;
+ }
+
+ .contactParagraph {
+   margin: 50px 0;
+ }
 
 
 
@@ -162,6 +203,10 @@ body {
 
     .carousel-inner h2 {
       padding-top: 30px;
+    }
+
+    .contactParagraph {
+      margin-top: 160px;
     }
 
   }
