@@ -1,10 +1,14 @@
 extends ./layout.jade
 block content 
   .container
+    .row
+      h1.center Projects
+    hr
     if projects !== null
       - var index = projects.length - 1
       while index > 0
           include ../partials/projects/_project.jade
           - index = index - 2
+    hr
 
           

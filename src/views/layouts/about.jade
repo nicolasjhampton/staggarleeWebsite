@@ -1,2 +1,38 @@
 extends ./layout.jade
 block content 
+  .container.about
+    .row.row1
+      .col-sm-4.col-md-push-1.center
+        h3 #{about.header.headerText}
+        img.aboutPageImg.img-responsive(src='static/' + about.header.img)
+      .col-sm-1.col-md-pull-4
+      .col-sm-4
+        p.contactParagraph
+          strong !{about.header.paragraph}
+      .col-sm-3
+        h2 Skilled in:
+        .row
+          - var index = 0
+          while index < about.skills.length
+            .col-xs-12
+              span
+                p.skills #{about.skills[index]}
+              - index++ 
+    hr       
+    .row  
+      .col-sm-12
+        h2 Philosophy
+        p #{about.philosophy.paragraph}
+    hr
+    .row.center
+      .col-sm-12.center
+        h2(style="padding-bottom: 30px") Contact Information
+    .row
+      .col-xs-1.center
+        img.img-responsive(src='static/img/hat.svg')
+      each method in about.contact
+        include ../partials/about/_contactMethods.jade
+      .col-xs-1.center
+        img.img-responsive(src='static/img/hat.svg')
+    hr
+    

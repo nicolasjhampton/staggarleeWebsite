@@ -3,7 +3,8 @@
 var express = require('express'),
     billboards = require('./data/billboards.json'),
     row1 = require('./data/row-1-col-3.json'),
-    row2 = require('./data/row-2-col-1.json');
+    row2 = require('./data/row-2-col-1.json'),
+    about = require('./data/about.json');
     //comment is in reference to $ npm install node-rest-client --save
 
 var request = require('request');
@@ -51,7 +52,7 @@ app.get('/contact', function (request, response) {
 
 app.get('/about', function (request, response) {
   var path = request.path;
-  response.render('about', {path:path});
+  response.render('about', {path:path, about:about});
 
 });
 

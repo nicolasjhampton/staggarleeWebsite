@@ -7,6 +7,6 @@ each billboard in billboards
         h2 !{billboard.header}
         // lead makes the main body text a little better
         p.lead !{billboard.paragraph}
-    p.btn-group
+    p.btn-group(style="display: none")
       // the btn class has a lot of feature classes for buttons
       a.btn.btn-success.btn-lg(data-toggle='modal', href='#textModal') #{billboard.buttonText}

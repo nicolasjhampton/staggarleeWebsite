@@ -1,0 +1,53 @@
+{
+  "header": {
+       "img": "/img/Headshot.jpg",
+       "imgCurve": "border-radius: 100%",
+       "headerText": "Nicolas James Hampton",
+       "paragraph": "Sole employee of Staggarlee Development<br>Leader of People &amp; Communicator<br>Coder &amp; Poet"
+  },
+  "philosophy": {
+    "header": "Philosophy",
+    "paragraph": "There is a balance between the data we need and the way we interact with it. This balance is often at odds with our ergonomics, the limitations of our current communication structures, and the ever increasing speed at which information needs to be updated worldwide. The best solutions are often the ones that go quietly unnoticed. I strive to bring those quiet successes to my work: That rare sound technology makes when a user interacts with it seamlessly the release of a truly great product. Some days are louder than others."
+  },
+  "contact": {
+    "email": {
+      "method": "Email",
+      "link": "nicolasjhampton@gmail.com",
+      "img" :"/img/gmail.svg"
+    },
+    "github": {
+      "method": "Github",
+      "link": "https://github.com/nicolasjhampton",
+      "img": "/img/github.svg"
+    },
+    "linkedIn": {
+      "method": "LinkedIn",
+      "link": "https://www.linkedin.com/in/nicolasjhampton",
+      "img": "/img/Linkedin.svg"
+    },
+    "twitter": {
+      "method": "Twitter",
+      "link": "https://twitter.com/NicolasJHampton",
+      "img": "/img/twitter.svg"
+    },
+    "treehouse": {
+      "method": "Treehouse",
+      "link": "https://teamtreehouse.com/nicolashampton",
+      "img": "/img/treehouse.png"
+    }
+  },
+  "achievements": [
+    "Published poet with 23 publication credits",
+    "Forum moderator for teamtreehouse.com",
+    "Former Editor-In-Chief of Asylum Lake Magazine, the grassroots Michigan arts magazine.",
+    "A+ Certified Computer Technician",
+    "Invited to read verse at the AWP National Writers Conference in 2013"
+  ],
+  "skills": [
+    "HTML5, CSS, and Javascript",
+    "Bootstrap and Jquery",
+    "Node.js, Express.js, and MySql",
+    "Git Version Control and Unix Command Line",
+    "Some Java and Android Development knowledge"
+  ]
+}
