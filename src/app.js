@@ -22,7 +22,7 @@ var row1List = Object.keys(row1).map(function (value) {
 
 var app = express();
 
-
+app.set('port', (process.env.PORT || 5000));
 
 // create application/x-www-form-urlencoded parser
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
@@ -122,6 +122,6 @@ app.get('/publications', function (request, response) {
 });
 
 
-app.listen(3000, function() {
+app.listen(app.get('port'), function() {
   console.log('Express is running a Frontend server on port 3000');
 });
