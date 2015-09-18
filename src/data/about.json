@@ -12,7 +12,7 @@
   "contact": {
     "email": {
       "method": "Email",
-      "link": "nicolasjhampton@gmail.com",
+      "link": "mailto:nicolasjhampton@gmail.com?subject=StaggarleeVistor",
       "img" :"/img/gmail.svg"
     },
     "github": {

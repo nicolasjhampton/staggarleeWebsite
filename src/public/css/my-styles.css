@@ -122,7 +122,7 @@ body {
  ************************/
 
  .about .row1 {
-   padding-top: 50px;
+   padding-top: 10px;
  }
 
  .center {
@@ -136,6 +136,12 @@ body {
    display:inline;
    padding: 0 0;
  }
+
+ .aboutPageHeader {
+   font-family: serif;
+   display:block;
+   text-align: center;
+}
 
  .contactHeader{
    display: block;
@@ -204,9 +210,9 @@ body {
     .carousel-inner h2 {
       padding-top: 30px;
     }
-
+    /* aligns paragraph with about page pic for larger sizes */
     .contactParagraph {
-      margin-top: 160px;
+      margin-top: 90px;
     }
 
   }

@@ -5,7 +5,10 @@ var express = require('express'),
     row1 = require('./data/row-1-col-3.json'),
     row2 = require('./data/row-2-col-1.json'),
     about = require('./data/about.json');
-    //comment is in reference to $ npm install node-rest-client --save
+
+var gig;
+
+var bodyParser = require('body-parser');
 
 var request = require('request');
 
@@ -19,24 +22,50 @@ var row1List = Object.keys(row1).map(function (value) {
 
 var app = express();
 
+
+
+// create application/x-www-form-urlencoded parser
+var urlencodedParser = bodyParser.urlencoded({ extended: false })
+
 app.use('/static', express.static(__dirname + '/libs'));
 app.use('/static', express.static(__dirname + '/public'));
+
 
 //setting the template engine to jade
 app.set('view engine', 'jade');
 app.set('views', __dirname + '/views/layouts');
 
-app.get('/', function (request, response){
+var parse = function(requests, response, next) {
+  gig = JSON.stringify(requests.body);
+
+  var options = {
+    url: "",
+    method: "POST",
+    headers: {
+      "X-Parse-Application-Id": "",
+      "X-Parse-REST-API-Key": "",
+      "Content-Type": "application/json"
+    },
+    body: gig
+  };
+
+  request(options);
+  next();
+
+};
+
+var root = function (request, response){
   var path = "/home";
   response.render('main', {billboards:billboardsList, row1:row1List, row2:row2, path:path});
 
-});
+};
 
-app.get('/home', function (request, response) {
-  var path = request.path;
-  response.render('main', {billboards:billboardsList, row1:row1List, row2:row2, path:path});
 
-});
+app.get('/', root);
+
+app.get('/home', root);
+
+app.post('/', urlencodedParser, [parse, root]);
 
 app.get('/blog', function (request, response) {
   var path = request.path;

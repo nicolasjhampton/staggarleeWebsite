@@ -2,13 +2,15 @@ extends ./layout.jade
 block content 
   .container.about
     .row.row1
-      .col-sm-4.col-md-push-1.center
-        h3 #{about.header.headerText}
-        img.aboutPageImg.img-responsive(src='static/' + about.header.img)
-      .col-sm-1.col-md-pull-4
-      .col-sm-4
-        p.contactParagraph
-          strong !{about.header.paragraph}
+      .col-sm-9
+        h2.aboutPageHeader 
+          strong #{about.header.headerText}
+        .col-sm-5.col-lg-push-2.center
+          img.aboutPageImg.img-responsive(src='static/' + about.header.img)
+        .col-sm-2.col-lg-pull-5
+        .col-sm-5
+          p.contactParagraph
+            strong !{about.header.paragraph}
       .col-sm-3
         h2 Skilled in:
         .row
@@ -27,7 +29,7 @@ block content
     .row.center
       .col-sm-12.center
         h2(style="padding-bottom: 30px") Contact Information
-    .row
+    .row.center
       .col-xs-1.center
         img.img-responsive(src='static/img/hat.svg')
       each method in about.contact

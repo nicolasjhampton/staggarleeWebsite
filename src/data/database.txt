@@ -13,3 +13,26 @@ description VARCHAR(500) NULL,
 project INTEGER NOT NULL,
 timeline INTEGER NOT NULL,
 CONSTRAINT FOREIGN KEY (email_id) REFERENCES email(email_id) ON DELETE CASCADE);
+
+
+
+
+connection.connect(function(err) {
+
+  if(!err) {
+    console.log("Database is connected...\n\n");
+  } else {
+    console.log("Error connecting to database...\n\n");
+  }
+
+});
+
+connection.query('SELECT * FROM user LIMIT 2',
+  function(err, rows, fields) {
+    connection.end();
+      if(!err) {
+        console.log('These are the rows returned:', rows);
+      } else {
+        console.log('Error while performing Query');
+      }
+  });

@@ -7,21 +7,21 @@
           | ×
         h4.modal-title What are you looking for?
       .modal-body
-        form.form
+        form.form(action='/', method='post')
           // Name, company, email, and phone fields
           .form-group
             label.formLabel(for='name') Name:
-            input#formName.form-control(type='text', placeholder='Name')
+            input#formName.form-control(type='text', placeholder='Name', name='name')
             label.formLabel(for='company') Organization/Company: (Optional)
-            input#formOrg.form-control(type='text', placeholder='Organization')
+            input#formOrg.form-control(type='text', placeholder='Organization', name='company')
             label.formLabel(for='email') Email:
-            input#formEmail.form-control(type='email', placeholder='Email')
+            input#formEmail.form-control(type='email', placeholder='Email', name='email')
             label.formLabel(for='phone') Phone:(Optional)
-            input#formPhone.form-control(type='tel', placeholder='Phone number')
+            input#formPhone.form-control(type='tel', placeholder='Phone number', name='phone')
           // project dropdown
           .form-group
             label.formLabel(for='project') Project:
-            select.form-control
+            select.form-control(name='project')
               option(value=1) Personal site
               option(value=2) Writer's blog
               option(value=3) Artist Portfolio
@@ -32,7 +32,7 @@
           // timeframe dropdown
           .form-group
             label.formLabel(for='time-frame') What's your project's timetable:
-            select.form-control
+            select.form-control(name='timeframe')
               option(value=5) I need it yesterday!
               option(value=4) I have a week.
               option(value=3) Two weeks is reasonable
@@ -42,6 +42,6 @@
           // textarea for details
           .form-group
             label.formLabel(for='description') So, tell me more about it...(500 characters max)
-            textarea#formDetails.form-control(type='text')
+            textarea#formDetails.form-control(type='text', name='details')
           // submit button
-          button.btn.btn-primary(type='submit', data-dismiss='modal') Let's talk about it!
+          button.btn.btn-primary(type='submit', value='Submit') Let's talk about it!
